@@ -1,0 +1,32 @@
+<html>
+  <header>
+    <h1>tap counter</h1>
+  </header>
+  <body>
+      <p id="num"></p>
+    <button id="count_button" onclick="count()">tap</button>
+    <button id="reset_button" onclick="reset()">reset</button>
+  </body>
+  <style>
+    #num {
+      font-size: 20;
+    }
+    body {
+      text-align: center;
+    }
+  </style>
+  <script>
+    let counter = 0;
+    let timer = 0;
+    document.getElementById("num").innerHTML = counter;
+    document.getElementById("timer").innerHTML = timer;
+    function count() {
+      counter = counter + 1;
+      document.getElementById("num").innerHTML = counter;
+    }
+    function reset() {
+      counter = 0;
+      document.getElementById("num").innerHTML = counter;
+    }
+  </script>
+</html>
